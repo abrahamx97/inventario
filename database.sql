@@ -1,13 +1,3 @@
-create database if not EXISTS `inventarioj`;
-use `inventarioj`;
-
--- Dumping structure for table inventario.articulos
-CREATE TABLE IF NOT EXISTS `articulos` (
-  `id_articulo` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(50) NOT NULL,
-  `descripcion` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id_articulo`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table inventario.articulos: ~2 rows (approximately)
 /*!40000 ALTER TABLE `articulos` DISABLE KEYS */;
@@ -88,3 +78,6 @@ INSERT INTO `detalle_inventario` (`id_inventario`, `id_articulo`, `cantidad`) VA
 	(1, 2, 10),
 	(3, 1, 1);
 /*!40000 ALTER TABLE `detalle_inventario` ENABLE KEYS */;
+
+
+select* from inventarios

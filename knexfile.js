@@ -6,8 +6,9 @@ module.exports = {
         client: 'mysql',
         connection: {
           database: 'inventario',
-          user:     'root',
-          password: ''
+          user:     'inventario',
+          password: 'sandunga1000',
+          port: 3307
         },
         pool: {
           min: 2,
