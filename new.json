@@ -1,0 +1,11 @@
+{
+    "inventario": {
+        "id_salon": 1,
+        "encargado": "abraham",
+        "observaciones": "ninguna"
+    },
+    "detalle": [
+        {"id_articulo": 1, "cantidad": 10},
+        {"id_articulo": 2, "cantidad": 12}
+    ]
+}
