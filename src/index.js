@@ -21,6 +21,6 @@ app.use(salones.routes)
 app.use(inventarios.routes)
 
 
-const server = app.listen(port, () => {
+const server = app.listen(port, '0.0.0.0', () => {
     console.log(`inventario server running in port ${port}`)
 });
