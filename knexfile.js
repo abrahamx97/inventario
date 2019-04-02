@@ -13,7 +13,8 @@ module.exports = {
           database: database,
           user:     user,
           password: password,
-          port: port
+          port: port,
+          host: '127.0.0.1'
         },
         pool: {
           min: 2,
