@@ -1,3 +1,12 @@
+use inventario;
+
+CREATE TABLE IF NOT EXISTS `articulos` (
+  `id_articulo` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) NOT NULL,
+  `descripcion` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_articulo`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
 
 -- Dumping data for table inventario.articulos: ~2 rows (approximately)
 /*!40000 ALTER TABLE `articulos` DISABLE KEYS */;
