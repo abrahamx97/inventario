@@ -5,6 +5,15 @@ const password = NODE_ENV === 'production' ? 'sandunga1000' : 'root'
 const database = NODE_ENV === 'production' ? 'inventario' : 'inventario'
 const port = NODE_ENV === 'production' ? 3306 : 3306
 
+console.log(JSON.stringify({
+  user: user,
+  password: password,
+  database: database,
+  port: port,
+  NODE_ENV: NODE_ENV
+}))
+
+
 module.exports = {
 
     development: {
