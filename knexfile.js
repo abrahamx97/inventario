@@ -1,8 +1,8 @@
 // Update with your config settings.
 const NODE_ENV = process.env.NODE_ENV
-const user = NODE_ENV === 'production' ? process.env.DB_USER : 'root'
-const password = NODE_ENV === 'production' ? process.env.DB_PASSWORD : 'root'
-const database = NODE_ENV === 'production' ? process.env.DB_NAME : 'inventario'
+const user = NODE_ENV === 'production' ? 'inventario' : 'root'
+const password = NODE_ENV === 'production' ? 'sandunga1000' : 'root'
+const database = NODE_ENV === 'production' ? 'inventario' : 'inventario'
 const port = NODE_ENV === 'production' ? 3306 : 3306
 
 module.exports = {
