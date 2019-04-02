@@ -1,8 +1,9 @@
 const koa = require('koa');
 const cors = require('@koa/cors');
 const bodyParser = require('koa-bodyparser');
-const port = process.env.port || 3000;
 const app = new koa();
+const NODE_ENV = process.env.NODE_ENV
+const port = NODE_ENV === 'production' ? 8080 : 3000
 
 //importing routes
 const dirpath = './controllers/'
