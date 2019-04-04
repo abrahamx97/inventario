@@ -11,6 +11,8 @@ const articulos = require(`${dirpath}articulos`)
 const edificios = require(`${dirpath}edificios`)
 const salones = require(`${dirpath}salones`)
 const inventarios = require(`${dirpath}inventarios`)
+const platillos = require(`${dirpath}platillos`)
+const ventas = require(`${dirpath}ventas`)
 
 app.use(cors())
 app.use(bodyParser())
@@ -19,6 +21,8 @@ app.use(articulos.routes)
 app.use(edificios.routes)
 app.use(salones.routes)
 app.use(inventarios.routes)
+app.use(platillos.routes)
+app.use(ventas.routes)
 
 
 const server = app.listen(port, '0.0.0.0', () => {
