@@ -5,10 +5,18 @@ const platillos = require('../models/platillos')
 
 router.get(BASE_PATH, async (ctx) => {
     try {
-        var result = await platillos.all()
+        let ids=ctx.query.Ids
+        ids = ids === undefined || ids === null ? [] : ids.split(',').map(Number)
+        var result = []
+        if(ids.length > 0){
+            result = await platillos.allWhereIdsIn(ids)
+        }else {
+            result = await platillos.all()
+        }
         ctx.body = {data: result}
         ctx.status = ok
     } catch (error) {
+        console.log(JSON.stringify(error))
         ctx.status = serverError
     }
 })

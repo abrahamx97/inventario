@@ -6,6 +6,10 @@ function all(){
     return knex.select('*').from(table)
 }
 
+function allWhereIdsIn(ids){
+    return knex.select('*').from(table).whereIn(`cve_${singular}`, ids)
+}
+
 function findByCagoriaPlatillo(cve_categoria_platillo){
     return knex.select('*').from(table).where('cve_categoria_platillo', cve_categoria_platillo)
 }
@@ -32,5 +36,6 @@ module.exports={
     find,
     update,
     del,
-    findByCagoriaPlatillo
+    findByCagoriaPlatillo,
+    allWhereIdsIn
 }
